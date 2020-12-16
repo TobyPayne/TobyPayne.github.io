@@ -1,0 +1,41 @@
+<html>
+<head>
+ <link rel=stylesheet type=text/css href=css/new.css />
+ </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="color:White;background: linear-gradient(to bottom, #000099 0%, #0000ff 100%);">
+<!-- This code is setting up the navigation bar at the top of the page, but most of it is done in the css -->
+<div class="topbar">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a class="active" href="contact.html">Contact</a>
+</div> 
+
+<!-- This is the title and subtitle for my main page -->
+<p></p>
+<div class = "Maintitle">Contact Me</div>
+<br>
+<div class="contact-form">
+	<form id = "contact-form" method = "post" action = "form-handler.php">
+	<input name = "name" type = "text" class = "form-control" placeholder = "Your Name" required>
+	<br>
+	<input name = "email" type = "email" class = "form-control" placeholder = "Your Email" required>
+	<br>
+	<textarea name = "message" class = "form-control" placeholder="Your message here" row="4" required>
+	</textarea>
+	<br>
+	<input type="submit" class = "form-control submit" value = "Send Message">
+	</form>
+</div>
+
+<br> <br>
+<br> <br>
+<br> <br>
+<!-- The bottom bar is just a copy of the topbar, with minor changes -->
+<div class="Botbar"> 
+<a> © Toby Payne 2020 </a>
+</div>
+</body>
+</html>

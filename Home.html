@@ -1,0 +1,74 @@
+<html>
+<head>
+ <link rel=stylesheet type=text/css href=css/new.css />
+ </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="color:White;background: linear-gradient(to bottom, #000099 0%, #0000ff 100%);">
+<!-- This code is setting up the navigation bar at the top of the page, but most of it is done in the css -->
+<div class="topbar">
+  <a class="active" href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div> 
+
+<!-- This is the title and subtitle for my main page -->
+<p></p>
+<div class = "Maintitle">Trenchcoat</div>
+<div class="subtitle">The Portfolio of Toby Payne</div>
+<br>
+
+<!-- This code sets up the slideshow on my home page -->
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/Slideshow1.png" style="width:100%">
+  <div class="text">This image is a placeholder</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Slideshow2.png" style="width:100%">
+  <div class="text">This image is a placeholder</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Slideshow3.png" style="width:100%">
+  <div class="text">This image is a placeholder</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides"); // this code gets the slide images by class, rather than having to get every single one individually
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    // this stops the slide showing an image that doesnt exist, and caters for me adding more slides at any point.
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");  // this sets a specific bullet at the bottom as active
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // this changes the image every 4 seconds
+}
+</script>
+<!-- The bottom bar is just a copy of the topbar, with minor changes -->
+<div class="Botbar"> 
+<a> © Toby Payne 2020 </a>
+</div>
+</body>
+</html>
